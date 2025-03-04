@@ -1,0 +1,41 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Nav from "../components/nav.astro";
+---
+
+<Layout title="SaviLinux | Inicio">
+  <Nav />
+  <main
+    class="p-2 grid grid-cols-3"
+    style="grid-template-columns: 1fr 7fr 2fr;"
+  >
+    <aside class="w-full flex flex-row items-center justify-center">
+      <!-- Noticias -->
+      <article class="w-full flex flex-col gap-4">
+        <h2 class="text-2xl font-bold">Noticias</h2>
+        <ul class="flex flex-col gap-4">
+          <li class="flex flex-col gap-1">
+            <h4 class="text-base font-bold">SaviLinux 1.0.0</h4>
+            <p class="text-sm">
+              ¡Ya está disponible la versión 1.0.0 de SaviLinux! Descárgala
+              <a href="/descargas" class="underline text-green-700">aquí</a>
+            </p>
+          </li>
+          <li class="flex flex-col gap-1">
+            <h4 class="text-base font-bold">Nueva página web</h4>
+            <p class="text-sm">
+              ¡Estrenamos página web! Esperamos que os guste.
+            </p>
+          </li>
+        </ul>
+      </article>
+    </aside>
+    <section class="w-full flex flex-col items-center justify-center">
+      <h1 class="text-4xl font-bold">¡Bienvenido a SaviLinux!</h1>
+      <p class="text-lg">Un sistema operativo basado en Linux para todos</p>
+    </section>
+    <aside class="w-full flex flex-row items-center justify-center">
+      <!-- Additional content can go here -->
+    </aside>
+  </main>
+</Layout>
