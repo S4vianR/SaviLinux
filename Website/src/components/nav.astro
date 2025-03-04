@@ -1,13 +1,36 @@
+<script type="module" is:inline>
+  // Detectar en que página estamos para tener distintos estilos para la página actual
+let currentPage = window.location.pathname;
+
+// Diccionario
+let pages = {
+  "/": "inicio",
+  "/nosotros": "nosotros",
+  "/contacto": "contacto",
+};
+
+// Cambiar el color del texto a blanco de la página actual
+if (currentPage in pages) {
+  let currentPageElement = document.getElementById(pages[currentPage]);
+  if (currentPageElement) {
+    currentPageElement.classList.add("text-white");
+  }
+}
+</script>
+
 <header
   class="h-1/12 w-full px-2 bg-slate-800 flex flex-row justify-between items-center border"
 >
   <img src="/logo.png" alt="SaviLinux" class="aspect-square h-16" />
   <ul
-    class="flex flex-row items-center justify-center gap-5 text-white font-medium"
+    class="flex flex-row items-center justify-center gap-5 text-gray-500 font-medium"
   >
-    <li><a href="/">Inicio</a></li>
-    <li><a href="/nosotros">Nosotros</a></li>
-    <li><a href="/descargas">Descargas</a></li>
-    <li><a href="/contacto">Contacto</a></li>
+    <li id="inicio"><a href="/">Inicio</a></li>
+    <li id="nosotros"><a href="/nosotros">Nosotros</a></li>
+    <li>
+      <a href="https://github.com/S4vianR/SaviLinux/releases" target="_blank"
+        >Descargas</a>
+    </li>
+    <li id="contacto"><a href="/contacto">Contacto</a></li>
   </ul>
 </header>
